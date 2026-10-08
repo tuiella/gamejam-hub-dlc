@@ -1,0 +1,20 @@
+{
+ "hint": "3분 발표의 흐름과 시간 배분",
+ "v": 1,
+ "nodes": [
+  {"kind": "node", "id": "a", "x": 0, "y": 64, "w": 152, "h": 56, "shape": "pill", "text": "한 줄 소개", "sub": "0:00 · 20초", "tone": "accent"},
+  {"kind": "node", "id": "b", "x": 200, "y": 64, "w": 152, "h": 56, "shape": "box", "text": "주제 해석", "sub": "0:20 · 20초", "tone": "purple"},
+  {"kind": "node", "id": "c", "x": 400, "y": 64, "w": 152, "h": 56, "shape": "box", "text": "시연", "sub": "0:40 · 80초", "tone": "blue"},
+  {"kind": "node", "id": "d", "x": 600, "y": 64, "w": 152, "h": 56, "shape": "box", "text": "하이라이트", "sub": "2:00 · 30초", "tone": "amber"},
+  {"kind": "node", "id": "e", "x": 800, "y": 64, "w": 152, "h": 56, "shape": "pill", "text": "팀 · 마무리", "sub": "2:30 · 30초", "tone": "green"},
+  {"kind": "node", "id": "f", "x": 400, "y": 200, "w": 152, "h": 56, "shape": "note", "text": "멈추면 녹화 영상", "tone": "warm"}
+ ],
+ "groups": [],
+ "edges": [
+  {"id": "ab", "from": "a", "to": "b"},
+  {"id": "bc", "from": "b", "to": "c"},
+  {"id": "cd", "from": "c", "to": "d"},
+  {"id": "de", "from": "d", "to": "e"},
+  {"id": "cf", "from": "c", "to": "f", "label": "문제 생기면", "dashed": true}
+ ]
+}

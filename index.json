@@ -1,0 +1,25 @@
+{
+ "v": 1,
+ "packs": [
+  {
+   "id": "genre-starter",
+   "name": "장르별 기획 템플릿",
+   "description": "플랫포머·로그라이크·퍼즐·리듬 게임 기획서와 로그라이크 아이템 표",
+   "version": "1.0.0",
+   "templates": 5,
+   "size": 7962,
+   "sha256": "0d9679dcf08a3646972b8d3ada3b8e76437a3e9bc4c80741a4a70f90121792a6",
+   "path": "packs/genre-starter.json"
+  },
+  {
+   "id": "jam-ops",
+   "name": "잼 운영 팩",
+   "description": "발표 대본, 스토어 페이지 문구, 버그 보고 가이드, 발표 흐름 도식, 제출 체크리스트",
+   "version": "1.0.0",
+   "templates": 5,
+   "size": 7520,
+   "sha256": "12735516b07f03dd105662153185a0252646d72ce0386fa49791a6a0ed024120",
+   "path": "packs/jam-ops.json"
+  }
+ ]
+}
