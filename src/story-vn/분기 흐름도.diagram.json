@@ -1,0 +1,127 @@
+{
+ "hint": "선택지와 엔딩까지의 흐름",
+ "v": 1,
+ "nodes": [
+  {
+   "kind": "node",
+   "id": "start",
+   "x": 0,
+   "y": 120,
+   "w": 136,
+   "h": 56,
+   "shape": "pill",
+   "text": "프롤로그",
+   "tone": "accent"
+  },
+  {
+   "kind": "node",
+   "id": "c1",
+   "x": 200,
+   "y": 112,
+   "w": 136,
+   "h": 88,
+   "shape": "diamond",
+   "text": "선택 1",
+   "tone": "amber"
+  },
+  {
+   "kind": "node",
+   "id": "a",
+   "x": 400,
+   "y": 32,
+   "w": 136,
+   "h": 56,
+   "shape": "box",
+   "text": "A 루트",
+   "tone": "blue",
+   "sub": "유나와 함께"
+  },
+  {
+   "kind": "node",
+   "id": "b",
+   "x": 400,
+   "y": 200,
+   "w": 136,
+   "h": 56,
+   "shape": "box",
+   "text": "B 루트",
+   "tone": "purple",
+   "sub": "혼자 조사"
+  },
+  {
+   "kind": "node",
+   "id": "c2",
+   "x": 600,
+   "y": 112,
+   "w": 136,
+   "h": 88,
+   "shape": "diamond",
+   "text": "선택 2",
+   "tone": "amber"
+  },
+  {
+   "kind": "node",
+   "id": "good",
+   "x": 800,
+   "y": 32,
+   "w": 136,
+   "h": 56,
+   "shape": "pill",
+   "text": "좋은 엔딩",
+   "tone": "green"
+  },
+  {
+   "kind": "node",
+   "id": "bad",
+   "x": 800,
+   "y": 200,
+   "w": 136,
+   "h": 56,
+   "shape": "pill",
+   "text": "나쁜 엔딩",
+   "tone": "warm"
+  }
+ ],
+ "groups": [],
+ "edges": [
+  {
+   "id": "start-c1",
+   "from": "start",
+   "to": "c1"
+  },
+  {
+   "id": "c1-a",
+   "from": "c1",
+   "to": "a",
+   "label": "믿는다"
+  },
+  {
+   "id": "c1-b",
+   "from": "c1",
+   "to": "b",
+   "label": "의심한다"
+  },
+  {
+   "id": "a-c2",
+   "from": "a",
+   "to": "c2"
+  },
+  {
+   "id": "b-c2",
+   "from": "b",
+   "to": "c2"
+  },
+  {
+   "id": "c2-good",
+   "from": "c2",
+   "to": "good",
+   "label": "진실을 말한다"
+  },
+  {
+   "id": "c2-bad",
+   "from": "c2",
+   "to": "bad",
+   "label": "숨긴다"
+  }
+ ]
+}

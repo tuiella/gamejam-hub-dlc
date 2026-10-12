@@ -2,6 +2,36 @@
  "v": 1,
  "packs": [
   {
+   "id": "action-shooter",
+   "name": "액션·슈팅 팩",
+   "description": "액션·슈팅 기획서, 보스 패턴 설계, 적 웨이브 표, 무기 밸런스 표, 보스 상태도",
+   "version": "1.0.0",
+   "templates": 6,
+   "size": 14261,
+   "sha256": "dc7e43e81d47f142240e41e3310b417559fa70fa811eb1e3ccf39b0338ce4c1f",
+   "path": "packs/action-shooter.json"
+  },
+  {
+   "id": "art-sound",
+   "name": "아트·사운드 작업 팩",
+   "description": "스프라이트 작업 목록, 애니메이션 프레임 표, 사운드 큐 시트, UI 화면 목록, 아트 피드백 양식, 무드보드 2종",
+   "version": "1.0.0",
+   "templates": 7,
+   "size": 18057,
+   "sha256": "7d326ae9c5992754d6eb48d0de762e520de1369495d2894b3184caf3813a0498",
+   "path": "packs/art-sound.json"
+  },
+  {
+   "id": "casual-idle",
+   "name": "캐주얼·방치형 팩",
+   "description": "하이퍼캐주얼·방치형 기획서, 업그레이드 비용 표(수식), 재화 흐름도",
+   "version": "1.0.0",
+   "templates": 4,
+   "size": 9207,
+   "sha256": "ec87d2be62cbd36a2e74ec72d9cc052f23c347398c5e68da7ddbeaa9b230be97",
+   "path": "packs/casual-idle.json"
+  },
+  {
    "id": "genre-starter",
    "name": "장르별 기획 템플릿",
    "description": "플랫포머·로그라이크·퍼즐·리듬 게임 기획서와 로그라이크 아이템 표",
@@ -20,6 +50,36 @@
    "size": 7520,
    "sha256": "12735516b07f03dd105662153185a0252646d72ce0386fa49791a6a0ed024120",
    "path": "packs/jam-ops.json"
+  },
+  {
+   "id": "story-vn",
+   "name": "스토리·비주얼 노벨 팩",
+   "description": "비주얼 노벨 기획서, 세계관 설정, 대사 스크립트 표, 분기 흐름도, 인물 관계도",
+   "version": "1.0.0",
+   "templates": 5,
+   "size": 9170,
+   "sha256": "bd98787d65dca76aa3d082d12ec57c25e6ddd1e53f62200e46dfe01e4b4caa28",
+   "path": "packs/story-vn.json"
+  },
+  {
+   "id": "strategy-defense",
+   "name": "전략·디펜스 팩",
+   "description": "타워 디펜스 기획서, 유닛 상성표, 웨이브 표, 자원 흐름도",
+   "version": "1.0.0",
+   "templates": 4,
+   "size": 10960,
+   "sha256": "2463e974f1a4737effeaaaf3a52f1c78b5249fd620dedae9bd03899cb7c42997",
+   "path": "packs/strategy-defense.json"
+  },
+  {
+   "id": "team-ops",
+   "name": "팀 운영 팩",
+   "description": "킥오프 회의록, 데일리 스탠드업, 의사결정 기록, 역할 분담표, 리스크 목록, 브레인스토밍 맵",
+   "version": "1.0.0",
+   "templates": 6,
+   "size": 9624,
+   "sha256": "ecbb081427fe28206cfa88ed5b6eb51c3cca98e07995305cc46df700d778654e",
+   "path": "packs/team-ops.json"
   }
  ]
 }

@@ -1,0 +1,118 @@
+{
+ "hint": "재화가 들어오고 나가는 곳 — 막히는 곳 찾기",
+ "v": 1,
+ "nodes": [
+  {
+   "kind": "node",
+   "id": "gen",
+   "x": 0,
+   "y": 120,
+   "w": 152,
+   "h": 56,
+   "shape": "box",
+   "text": "생산기",
+   "tone": "green",
+   "sub": "초당 생산"
+  },
+  {
+   "kind": "node",
+   "id": "gold",
+   "x": 240,
+   "y": 120,
+   "w": 136,
+   "h": 56,
+   "shape": "pill",
+   "text": "골드",
+   "tone": "amber"
+  },
+  {
+   "kind": "node",
+   "id": "up",
+   "x": 480,
+   "y": 40,
+   "w": 152,
+   "h": 56,
+   "shape": "box",
+   "text": "업그레이드",
+   "tone": "blue"
+  },
+  {
+   "kind": "node",
+   "id": "buy",
+   "x": 480,
+   "y": 200,
+   "w": 152,
+   "h": 56,
+   "shape": "box",
+   "text": "새 생산기",
+   "tone": "blue"
+  },
+  {
+   "kind": "node",
+   "id": "pre",
+   "x": 720,
+   "y": 120,
+   "w": 136,
+   "h": 88,
+   "shape": "diamond",
+   "text": "환생",
+   "tone": "purple"
+  },
+  {
+   "kind": "node",
+   "id": "gem",
+   "x": 920,
+   "y": 120,
+   "w": 136,
+   "h": 56,
+   "shape": "pill",
+   "text": "보석",
+   "tone": "pink"
+  }
+ ],
+ "groups": [],
+ "edges": [
+  {
+   "id": "gen-gold",
+   "from": "gen",
+   "to": "gold"
+  },
+  {
+   "id": "gold-up",
+   "from": "gold",
+   "to": "up",
+   "label": "쓰기"
+  },
+  {
+   "id": "gold-buy",
+   "from": "gold",
+   "to": "buy",
+   "label": "쓰기"
+  },
+  {
+   "id": "up-gen",
+   "from": "up",
+   "to": "gen",
+   "label": "생산 증가",
+   "dashed": true
+  },
+  {
+   "id": "buy-gen",
+   "from": "buy",
+   "to": "gen",
+   "label": "늘림",
+   "dashed": true
+  },
+  {
+   "id": "gold-pre",
+   "from": "gold",
+   "to": "pre",
+   "label": "목표 도달"
+  },
+  {
+   "id": "pre-gem",
+   "from": "pre",
+   "to": "gem"
+  }
+ ]
+}

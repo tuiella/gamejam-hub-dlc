@@ -70,6 +70,19 @@ def sheet_from_csv(path):
     with io.open(path, encoding="utf-8-sig", newline="") as f:
         rows = [r for r in csv.reader(f)]
     grid = [[typed(c) if c and not c.startswith("=") else c for c in r] for r in rows]
+    # Formulas may refer to other formulas (a cost chain): compute in passes until settled.
+    values = [list(r) for r in grid]
+    for _ in range(len(grid) + 2):
+        changed = False
+        for r, row in enumerate(grid):
+            for c, v in enumerate(row):
+                if isinstance(v, str) and v.startswith("=") and not isinstance(values[r][c], (int, float)):
+                    val = eval_simple(v, values)
+                    if val is not None:
+                        values[r][c] = val
+                        changed = True
+        if not changed:
+            break
     cells = []
     for r, row in enumerate(grid):
         for c, v in enumerate(row):
@@ -78,7 +91,7 @@ def sheet_from_csv(path):
             if r == 0:
                 cells.append({"r": r, "c": c, "v": {"v": v, "m": str(v), **HEAD, "ct": {"fa": "General", "t": "g"}}})
             elif isinstance(v, str) and v.startswith("="):
-                val = eval_simple(v, grid)
+                val = values[r][c] if isinstance(values[r][c], (int, float)) else None
                 cell = {"f": v, "ct": {"fa": "General", "t": "n"}}
                 if val is not None:
                     cell.update(v=val, m=str(val))

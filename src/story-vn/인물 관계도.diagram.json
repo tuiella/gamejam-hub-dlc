@@ -1,0 +1,82 @@
+{
+ "hint": "인물 사이의 관계와 감정",
+ "v": 1,
+ "nodes": [
+  {
+   "kind": "node",
+   "id": "me",
+   "x": 280,
+   "y": 120,
+   "w": 152,
+   "h": 56,
+   "shape": "box",
+   "text": "주인공",
+   "tone": "accent",
+   "sub": "기억을 잃음"
+  },
+  {
+   "kind": "node",
+   "id": "yuna",
+   "x": 0,
+   "y": 0,
+   "w": 152,
+   "h": 56,
+   "shape": "box",
+   "text": "유나",
+   "tone": "pink",
+   "sub": "소꿉친구"
+  },
+  {
+   "kind": "node",
+   "id": "kai",
+   "x": 560,
+   "y": 0,
+   "w": 152,
+   "h": 56,
+   "shape": "box",
+   "text": "카이",
+   "tone": "blue",
+   "sub": "라이벌"
+  },
+  {
+   "kind": "node",
+   "id": "boss",
+   "x": 280,
+   "y": 280,
+   "w": 152,
+   "h": 56,
+   "shape": "box",
+   "text": "촌장",
+   "tone": "muted",
+   "sub": "비밀을 앎"
+  }
+ ],
+ "groups": [],
+ "edges": [
+  {
+   "id": "yuna-me",
+   "from": "yuna",
+   "to": "me",
+   "label": "좋아함"
+  },
+  {
+   "id": "me-kai",
+   "from": "me",
+   "to": "kai",
+   "label": "경쟁"
+  },
+  {
+   "id": "boss-me",
+   "from": "boss",
+   "to": "me",
+   "label": "감시",
+   "dashed": true
+  },
+  {
+   "id": "kai-yuna",
+   "from": "kai",
+   "to": "yuna",
+   "label": "보호"
+  }
+ ]
+}

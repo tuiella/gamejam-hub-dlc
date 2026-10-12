@@ -1,0 +1,118 @@
+{
+ "hint": "주제에서 아이디어로 뻗어 나가기",
+ "v": 1,
+ "nodes": [
+  {
+   "kind": "node",
+   "id": "theme",
+   "x": 320,
+   "y": 160,
+   "w": 160,
+   "h": 56,
+   "shape": "pill",
+   "text": "잼 주제",
+   "tone": "accent"
+  },
+  {
+   "kind": "node",
+   "id": "a",
+   "x": 0,
+   "y": 0,
+   "w": 152,
+   "h": 56,
+   "shape": "box",
+   "text": "해석 1",
+   "tone": "blue"
+  },
+  {
+   "kind": "node",
+   "id": "b",
+   "x": 640,
+   "y": 0,
+   "w": 152,
+   "h": 56,
+   "shape": "box",
+   "text": "해석 2",
+   "tone": "purple"
+  },
+  {
+   "kind": "node",
+   "id": "c",
+   "x": 0,
+   "y": 320,
+   "w": 152,
+   "h": 56,
+   "shape": "box",
+   "text": "해석 3",
+   "tone": "pink"
+  },
+  {
+   "kind": "node",
+   "id": "d",
+   "x": 640,
+   "y": 320,
+   "w": 152,
+   "h": 56,
+   "shape": "box",
+   "text": "해석 4",
+   "tone": "green"
+  },
+  {
+   "kind": "node",
+   "id": "a1",
+   "x": 0,
+   "y": 120,
+   "w": 152,
+   "h": 56,
+   "shape": "note",
+   "text": "아이디어",
+   "tone": "amber"
+  },
+  {
+   "kind": "node",
+   "id": "b1",
+   "x": 640,
+   "y": 120,
+   "w": 152,
+   "h": 56,
+   "shape": "note",
+   "text": "아이디어",
+   "tone": "amber"
+  }
+ ],
+ "groups": [],
+ "edges": [
+  {
+   "id": "theme-a",
+   "from": "theme",
+   "to": "a"
+  },
+  {
+   "id": "theme-b",
+   "from": "theme",
+   "to": "b"
+  },
+  {
+   "id": "theme-c",
+   "from": "theme",
+   "to": "c"
+  },
+  {
+   "id": "theme-d",
+   "from": "theme",
+   "to": "d"
+  },
+  {
+   "id": "a-a1",
+   "from": "a",
+   "to": "a1",
+   "dashed": true
+  },
+  {
+   "id": "b-b1",
+   "from": "b",
+   "to": "b1",
+   "dashed": true
+  }
+ ]
+}

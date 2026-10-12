@@ -1,0 +1,120 @@
+{
+ "hint": "보스 행동 상태와 전환 조건",
+ "v": 1,
+ "nodes": [
+  {
+   "kind": "node",
+   "id": "idle",
+   "x": 240,
+   "y": 0,
+   "w": 128,
+   "h": 56,
+   "shape": "pill",
+   "text": "대기",
+   "tone": "muted"
+  },
+  {
+   "kind": "node",
+   "id": "chase",
+   "x": 0,
+   "y": 136,
+   "w": 128,
+   "h": 56,
+   "shape": "pill",
+   "text": "추적",
+   "tone": "blue"
+  },
+  {
+   "kind": "node",
+   "id": "atk",
+   "x": 240,
+   "y": 136,
+   "w": 128,
+   "h": 56,
+   "shape": "pill",
+   "text": "공격 예고",
+   "tone": "amber",
+   "sub": "0.8초"
+  },
+  {
+   "kind": "node",
+   "id": "swing",
+   "x": 480,
+   "y": 136,
+   "w": 128,
+   "h": 56,
+   "shape": "pill",
+   "text": "공격",
+   "tone": "pink"
+  },
+  {
+   "kind": "node",
+   "id": "stun",
+   "x": 240,
+   "y": 280,
+   "w": 128,
+   "h": 56,
+   "shape": "pill",
+   "text": "그로기",
+   "tone": "green",
+   "sub": "약점 노출"
+  },
+  {
+   "kind": "node",
+   "id": "phase",
+   "x": 480,
+   "y": 280,
+   "w": 136,
+   "h": 88,
+   "shape": "diamond",
+   "text": "페이즈 전환",
+   "tone": "warm"
+  }
+ ],
+ "groups": [],
+ "edges": [
+  {
+   "id": "idle-chase",
+   "from": "idle",
+   "to": "chase",
+   "label": "플레이어 발견"
+  },
+  {
+   "id": "chase-atk",
+   "from": "chase",
+   "to": "atk",
+   "label": "사거리 안"
+  },
+  {
+   "id": "atk-swing",
+   "from": "atk",
+   "to": "swing"
+  },
+  {
+   "id": "swing-idle",
+   "from": "swing",
+   "to": "idle",
+   "label": "끝",
+   "dashed": true
+  },
+  {
+   "id": "swing-stun",
+   "from": "swing",
+   "to": "stun",
+   "label": "막기 성공"
+  },
+  {
+   "id": "stun-idle",
+   "from": "stun",
+   "to": "idle",
+   "label": "3초",
+   "dashed": true
+  },
+  {
+   "id": "swing-phase",
+   "from": "swing",
+   "to": "phase",
+   "label": "체력 60%"
+  }
+ ]
+}

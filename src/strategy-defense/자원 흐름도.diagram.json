@@ -1,0 +1,102 @@
+{
+ "hint": "자원·타워·적 사이의 순환",
+ "v": 1,
+ "nodes": [
+  {
+   "kind": "node",
+   "id": "res",
+   "x": 0,
+   "y": 120,
+   "w": 136,
+   "h": 56,
+   "shape": "pill",
+   "text": "자원",
+   "tone": "amber"
+  },
+  {
+   "kind": "node",
+   "id": "tower",
+   "x": 220,
+   "y": 120,
+   "w": 152,
+   "h": 56,
+   "shape": "box",
+   "text": "타워 건설",
+   "tone": "blue"
+  },
+  {
+   "kind": "node",
+   "id": "kill",
+   "x": 460,
+   "y": 120,
+   "w": 152,
+   "h": 56,
+   "shape": "box",
+   "text": "적 처치",
+   "tone": "pink"
+  },
+  {
+   "kind": "node",
+   "id": "wave",
+   "x": 460,
+   "y": 0,
+   "w": 152,
+   "h": 56,
+   "shape": "box",
+   "text": "웨이브 클리어",
+   "tone": "green"
+  },
+  {
+   "kind": "node",
+   "id": "leak",
+   "x": 460,
+   "y": 260,
+   "w": 152,
+   "h": 56,
+   "shape": "box",
+   "text": "적 통과",
+   "tone": "warm",
+   "sub": "목숨 -1"
+  }
+ ],
+ "groups": [],
+ "edges": [
+  {
+   "id": "res-tower",
+   "from": "res",
+   "to": "tower",
+   "label": "쓰기"
+  },
+  {
+   "id": "tower-kill",
+   "from": "tower",
+   "to": "kill"
+  },
+  {
+   "id": "kill-res",
+   "from": "kill",
+   "to": "res",
+   "label": "보상",
+   "dashed": true
+  },
+  {
+   "id": "kill-wave",
+   "from": "kill",
+   "to": "wave"
+  },
+  {
+   "id": "wave-res",
+   "from": "wave",
+   "to": "res",
+   "label": "보너스",
+   "dashed": true
+  },
+  {
+   "id": "tower-leak",
+   "from": "tower",
+   "to": "leak",
+   "label": "막지 못하면",
+   "dashed": true
+  }
+ ]
+}
