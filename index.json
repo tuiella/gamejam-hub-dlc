@@ -12,6 +12,16 @@
    "path": "packs/action-shooter.json"
   },
   {
+   "id": "ai-jam-24h",
+   "name": "24시간 AI 게임잼 팩",
+   "description": "무박 24시간 일정표, 범위 줄이기, AI 기능 설계서, AI 활용 기록, 프롬프트 모음, AI 에셋 생성 목록, 크레딧 예산, 현장 팀 빌딩, 시연 준비, AI 흐름 도식",
+   "version": "1.0.0",
+   "templates": 10,
+   "size": 27327,
+   "sha256": "6ed6a5580653d6bde510c02a037b248c70027456f3712389a19ec2658c86badc",
+   "path": "packs/ai-jam-24h.json"
+  },
+  {
    "id": "art-sound",
    "name": "아트·사운드 작업 팩",
    "description": "스프라이트 작업 목록, 애니메이션 프레임 표, 사운드 큐 시트, UI 화면 목록, 아트 피드백 양식, 무드보드 2종",

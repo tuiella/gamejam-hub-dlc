@@ -1,0 +1,152 @@
+{
+ "hint": "게임 안 AI 호출과 실패 대비 경로",
+ "v": 1,
+ "nodes": [
+  {
+   "kind": "node",
+   "id": "input",
+   "x": 0,
+   "y": 120,
+   "w": 176,
+   "h": 56,
+   "shape": "pill",
+   "text": "플레이어 입력",
+   "tone": "accent"
+  },
+  {
+   "kind": "node",
+   "id": "cache",
+   "x": 240,
+   "y": 120,
+   "w": 192,
+   "h": 80,
+   "shape": "diamond",
+   "text": "미리 만든 답에 있나?",
+   "tone": "amber"
+  },
+  {
+   "kind": "node",
+   "id": "call",
+   "x": 520,
+   "y": 120,
+   "w": 176,
+   "h": 56,
+   "shape": "box",
+   "text": "AI 호출",
+   "tone": "blue",
+   "sub": "시간 제한 5초"
+  },
+  {
+   "kind": "node",
+   "id": "check",
+   "x": 800,
+   "y": 120,
+   "w": 176,
+   "h": 80,
+   "shape": "diamond",
+   "text": "응답 검사",
+   "tone": "amber"
+  },
+  {
+   "kind": "node",
+   "id": "use",
+   "x": 1080,
+   "y": 120,
+   "w": 176,
+   "h": 56,
+   "shape": "box",
+   "text": "게임에 반영",
+   "tone": "green"
+  },
+  {
+   "kind": "node",
+   "id": "wait",
+   "x": 520,
+   "y": 0,
+   "w": 176,
+   "h": 56,
+   "shape": "note",
+   "text": "기다리는 화면",
+   "tone": "muted",
+   "sub": "연출로 시간 벌기"
+  },
+  {
+   "kind": "node",
+   "id": "fallback",
+   "x": 800,
+   "y": 320,
+   "w": 176,
+   "h": 56,
+   "shape": "box",
+   "text": "대체 콘텐츠",
+   "tone": "warm",
+   "sub": "미리 만든 목록에서"
+  },
+  {
+   "kind": "node",
+   "id": "log",
+   "x": 1080,
+   "y": 320,
+   "w": 176,
+   "h": 56,
+   "shape": "note",
+   "text": "AI 활용 기록",
+   "tone": "purple"
+  }
+ ],
+ "groups": [],
+ "edges": [
+  {
+   "id": "e1",
+   "from": "input",
+   "to": "cache"
+  },
+  {
+   "id": "e2",
+   "from": "cache",
+   "to": "call",
+   "label": "없음"
+  },
+  {
+   "id": "e3",
+   "from": "cache",
+   "to": "use",
+   "label": "있음",
+   "dashed": true
+  },
+  {
+   "id": "e4",
+   "from": "call",
+   "to": "check"
+  },
+  {
+   "id": "e5",
+   "from": "check",
+   "to": "use",
+   "label": "정상"
+  },
+  {
+   "id": "e6",
+   "from": "check",
+   "to": "fallback",
+   "label": "실패·시간 초과"
+  },
+  {
+   "id": "e7",
+   "from": "fallback",
+   "to": "use"
+  },
+  {
+   "id": "e8",
+   "from": "call",
+   "to": "wait",
+   "dashed": true
+  },
+  {
+   "id": "e9",
+   "from": "use",
+   "to": "log",
+   "dashed": true
+  }
+ ]
+}
